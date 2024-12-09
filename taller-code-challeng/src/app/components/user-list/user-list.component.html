@@ -1,0 +1,9 @@
+<h1>User list</h1>
+<form [formGroup]="formGroup">
+    <label for="">Search Users:</label>
+    <input formControlName="searchText" type="text">
+</form>
+
+@for (user of users; track $index) {
+<app-user-card class="card-list" [user]="user"></app-user-card>
+}
